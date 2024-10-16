@@ -1,0 +1,13 @@
+<%= form_tag payments_path do %>
+  <label class="amount">
+      <span>Amount: $5.00</span>
+  </label>
+
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe['pk_test_51Q6yj3GLFdlhiZiicrlQIHCAzxtxOxgcCgEY9d4ZkZ7cU3YwLNvX9gDI6ZU51wpE0OVzVXtCwO6hs6h0AcfRing500vcVafLkz'] %>"
+    data-description="A month's subscription"
+    data-amount="500"
+    data-locale="auto">
+  </script>
+<% end %>
